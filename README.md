@@ -7,7 +7,7 @@ Golang 1.13 or higher
 
 Docker for Mac/Windows
 
-github.com/shyam81992/Inventory-Management-job // Which is used to notify the subscribers on temperature record creation
+github.com/shyam81992/Inventory-Management-job // Which is used to notify the shipments.
 
 Steps to run the project 
 
