@@ -19,7 +19,10 @@ Steps to run the project
         docker-compose up
     6. open a new terminal and got to the Inventory-Management project root folder and run the command 
         docker-compose up
-    
+
+Area of improments
+Postgres sql constraints (ex : FOREIGN Key, EXCLUSION)    
+Indexes to improve the query perforance.
 
 Inventory-Management-Job
 Listens to the shipment notifications. (Kinesis or kafka, sqs, rabbitmq)
