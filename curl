@@ -1,0 +1,32 @@
+
+Create User
+POST /users
+curl -H "Content-Type: application/json" -X POST -d "{\"name\" : \"shyam1\",\"role\" : \"vendor\",\"email\" : \"shyam1@gmail.com\"}" http://localhost:8080/users
+
+curl -H "Content-Type: application/json" -X POST -d "{\"name\" : \"shyam2\",\"role\" : \"buyer\",\"email\" : \"shyam2@gmail.com\"}" http://localhost:8080/users
+
+curl -H "Content-Type: application/json" -X POST -d "{\"name\" : \"shyam3\",\"role\" : \"shipper\",\"email\" : \"shyam3@gmail.com\"}" http://localhost:8080/users
+
+Create Inventory
+POST /inventory
+curl -H "Content-Type: application/json" -X POST -d "{\"name\" : \"product1\",\"count\" : 50,\"userid\" : 1}" http://localhost:8080/inventory
+
+Update Inventory
+PATCH /inventory/:id
+curl -H "Content-Type: application/json" -X PATCH -d "{\"count\":10}" http://localhost:8080/inventory/1
+
+Order Inventory
+POST /orders
+curl -H "Content-Type: application/json" -X POST -d "{\"inventoryid\" : 1,\"userid\" : 2,\"count\" : 50}" http://localhost:8080/orders
+
+Create WareHouse
+POST /warehouse
+curl -H "Content-Type: application/json" -X POST -d "{\"name\" : \"warehouse3\",\"address\" : \"xxxxx-xxxxxx-xxxxx\",\"userid\" : 3}" http://localhost:8080/warehouse
+
+Create Shipment
+POST /shipment
+curl -H "Content-Type: application/json" -X POST -d "{\"orderid\": 11,\"userid\": 3,\"warehouseid\": 1,\"status\": \"shipping\"}" http://localhost:8080/shipment
+
+Sales Report
+GET /sales/:userid
+curl -H "Content-Type: application/json" -X GET http://localhost:8080/sales/2
